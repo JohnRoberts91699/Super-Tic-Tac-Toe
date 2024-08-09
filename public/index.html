@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Super Tic-Tac-Toe</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="container">
+        <header>
+            <h1>Super Tic-Tac-Toe</h1>
+        </header>
+        
+        <nav>
+            <button id="startGame">Start Game</button>
+            <button id="showRules">Rules</button>
+            <button id="showAuth">Login/Signup</button>
+        </nav>
+        
+        <main>
+            <section id="gameBoard" class="board" style="display: none;">
+                ${[...Array(9)].map((_, boardIndex) => `
+                    <div id="board-${boardIndex}" class="mini-board">
+                        ${[...Array(9)].map((_, cellIndex) => `
+                            <div class="cell" data-board-index="${boardIndex}" data-cell-index="${cellIndex}"></div>
+                        `).join('')}
+                    </div>
+                `).join('')}
+            </section>
+
+            <section id="rulesSection" style="display:none;">
+                <h2>Rules</h2>
+                <ul>
+                    <li>The game is played on a 3x3 grid of tic-tac-toe boards.</li>
+                    <li>Players take turns making moves within the mini boards.</li>
+                    <li>The first move can be made on any board and in any space.</li>
+                    <li>Subsequent moves must be made on the mini board corresponding to the previous player's move.</li>
+                    <li>Winning a mini board awards the player that board.</li>
+                    <li>The first player to win three mini boards in a row wins the game.</li>
+                </ul>
+            </section>
+
+            <section id="authSection" style="display:none;">
+                <h2 id="authTitle">Login</h2>
+                <form id="authForm">
+                    <input type="text" id="username" placeholder="Username" required>
+                    <input type="password" id="password" placeholder="Password" required>
+                    <button id="authSubmit">Submit</button>
+                </form>
+                <button id="toggleAuth">Switch to Signup</button>
+            </section>
+        </main>
+        
+        <footer>
+            <p>Footer content here...</p>
+        </footer>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
