@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Super-Tic-Tac-Toe</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <h1 id="game-title">Super-Tic-Tac-Toe</h1>
+            <div id="user-info">
+                <span id="username"></span>
+                <div id="avatar" class="hidden"></div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div id="login-container" class="auth-container">
+            <h2>Login</h2>
+            <form id="login-form">
+                <input type="text" id="login-username" placeholder="Username" required>
+                <input type="password" id="login-password" placeholder="Password" required>
+                <button type="submit">Login</button>
+                <p>Don't have an account? <a href="#" id="show-signup">Sign up here</a></p>
+            </form>
+        </div>
+
+        <div id="signup-container" class="auth-container hidden">
+            <h2>Sign Up</h2>
+            <form id="signup-form">
+                <input type="text" id="signup-username" placeholder="Username" required>
+                <input type="password" id="signup-password" placeholder="Password" required>
+                <button type="submit">Sign Up</button>
+                <p>Already have an account? <a href="#" id="show-login">Log in here</a></p>
+            </form>
+        </div>
+
+        <div id="game-container" class="hidden">
+            <div id="win-loss-record">
+                <span>X Wins: <span id="x-wins">0</span></span> | 
+                <span>O Wins: <span id="o-wins">0</span></span>
+            </div>
+            <div id="board"></div>
+            <div id="rules">
+                <h2>Rules</h2>
+                <p>Super Tic-Tac-Toe is an advanced version of Tic-Tac-Toe played on a 9x9 grid.</p>
+                <ul>
+                    <li>The 9x9 grid is divided into nine 3x3 grids, known as mini-boards.</li>
+                    <li>The first player (X) starts by playing in any of the 81 spots.</li>
+                    <li>The location of the move within a mini-board determines where the next player (O) must play. For example, if X plays in the top-left corner of the top-left mini-board, O must play in the top-left mini-board.</li>
+                    <li>If a mini-board is already won or full, the player can choose any other mini-board.</li>
+                    <li>Players win a mini-board by getting three of their marks in a row (horizontally, vertically, or diagonally).</li>
+                    <li>The game is won by the player who wins three mini-boards in a row on the larger 3x3 grid.</li>
+                    <li>The game ends in a draw if all mini-boards are full and no player has won the larger grid.</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

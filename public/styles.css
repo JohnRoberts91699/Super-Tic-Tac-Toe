@@ -1,0 +1,73 @@
+.mini-board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 3px; /* Reduced gap to prevent overlap */
+    margin: 10px;
+    border: 2px solid black;
+    background-color: #f9f9f9; /* Background color to distinguish mini-boards */
+}
+
+.cell {
+    width: 50px; /* Reduced width */
+    height: 50px; /* Reduced height to keep squares */
+    border: 1px solid #444; /* Darker border for visibility */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    background-color: white;
+    box-sizing: border-box;
+}
+
+.winner-X {
+    background-color: rgba(173, 216, 230, 0.5); /* Light blue with transparency */
+}
+
+.winner-O {
+    background-color: rgba(240, 128, 128, 0.5); /* Light coral with transparency */
+}
+
+#board {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: repeat(3, auto);
+    gap: 10px; /* Adjusted gap for proper spacing */
+    margin: 20px auto;
+    padding: 10px;
+    background-color: #e0e0e0; /* Background color for the board */
+    border: 2px solid #444;
+    width: fit-content; /* Ensure proper width */
+}
+
+#game-container {
+    text-align: center; /* Center the game container */
+}
+
+#win-loss-record {
+    margin-bottom: 20px;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+#user-info {
+    display: flex;
+    align-items: center;
+}
+
+#avatar {
+    width: 40px;
+    height: 40px;
+    background-color: #ccc; /* Placeholder background */
+    border-radius: 50%;
+    margin-left: 10px;
+}
+
+.hidden {
+    display: none;
+}
